@@ -4,10 +4,89 @@
 		display: block;
 	}
 	&__picture {
+		position: relative;
+		margin-bottom: $spacer/2;
 		img {
 			width: 100%;
 		}
-		margin-bottom: $spacer/2;
+		&__more {
+			text-align: center;
+			@extend .pos-abso-full;
+			&__mouseover {
+				@extend .toggle-y;
+				@extend .pos-abso-bottom;
+				background: rgba($brand-secondary,.9);
+				&__content {
+					width: 100%;
+					padding: $spacer*2 20%;
+				}
+				.fast-buy {
+					@extend .toggle-y;
+				}
+			}
+			.btn-white-outline:hover {
+				background: white;
+				color: $brand-secondary;
+			}
+		}
+	}
+	&:hover &__picture__more__mouseover {
+		@extend .toggle-y-open;
+		max-height: 100px;
+	}
+
+	&.open-fast-buy {
+		.product-box__picture__more__mouseover {
+			&__content {
+				display: none;			
+			}
+			@extend .toggle-y-open;
+			height: 100%;
+			max-height: 100% !important;
+		}
+
+		.fast-buy {
+			@extend .toggle-y-open;
+			padding: $spacer*2 $spacer;
+			height: 100%;
+			&__content {
+					display: block;
+				&__close,
+				&__bottom {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.fast-buy {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&__content {
+			display: none;
+			width: 100%;
+			padding: 0 20%;
+			&__close {
+				position: absolute;
+				top: $spacer*3;
+				right: $spacer*3;
+				transform: scale(1.5);
+				display: none;
+			}
+			&__bottom {
+				display: none;
+				@extend .pos-abso-bottom;
+				bottom: $spacer*2;
+				padding: 0 20%;
+				margin: 0 $spacer/2;
+			}
+			&__element {
+				width: 100%;
+				margin-bottom: $spacer;
+				text-align-last:center;
+			}				
+		}
 	}
 
 	&__title {
@@ -33,12 +112,16 @@
 	}
 }
 
-
+.products-menu-nav {
+	position: relative;
+	height: 70px;
+}
 .products-menu {
 	margin: $spacer*2 0 $spacer 0;
-	position: relative;
-	width: 100%;
-	background: rgba(255,255,255,.8);
+    position: absolute;
+    top: 0;
+    width: 100%;
+	background: rgba(255,255,255,.95);
 	z-index: 1000;
 	&__items {
 		display: flex;
@@ -64,12 +147,10 @@
 	}
 	&__panel {
 		font-size: 14px;
-		max-height: 0;
-		overflow: hidden;
+		@extend .toggle-y;
 		display: flex;
 		flex-direction: row;
 		position: relative;
-		transition: $basic-transitions max-height;
 		&__list {
 			@extend .list-unstyled;
 			padding: $spacer 0;

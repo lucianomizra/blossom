@@ -14,24 +14,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	width: 55%;
 	margin: auto;
 }
-
-.btn-black {
-	color: $gray-dark;
-	border-color: $gray-dark;
-	background: $gray-dark;
+.toggle-y {
+	max-height: 0;
+	overflow: hidden;
+	transition: $basic-transitions max-height;
 }
-.btn-black-outline {
-	color: $gray-dark;
-	border: 2px solid $gray-dark;
-	background: transparent;
+.toggle-y-open {
+	max-height: 999px;
 }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-
-.swiper-button-prev { transform: rotate(90deg); }
-.swiper-button-next { transform: rotate(-90deg); }
-
 .input-control {
 	background: transparent;
 	border: 2px solid white;
@@ -43,6 +33,61 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	  color: white;
 	}
 }
+
+
+.btn-black {
+	color: $gray-dark;
+	border-color: $gray-dark;
+	background: $gray-dark;
+}
+.btn-black-outline {
+	color: $gray-dark;
+	border: 2px solid $gray-dark;
+	background: transparent;
+}
+
+.btn-white-outline {
+	// @extend .input-control;
+	color: white;
+	border: 2px solid white;
+	background: transparent;
+}
+.pointer {
+	cursor: pointer;
+}
+
+.select {
+	position: relative;
+	&:before {
+		@extend .icon;
+		width: 19px;
+		height: 12px;
+		background-image: url('../img/ico/arrow-white.png');
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: $spacer;
+		z-index: 1;
+	}
+	select {
+		z-index: 2;
+		text-align-last:center;
+		appearance: none;
+		option {
+			background: $brand-secondary;
+			line-height: $spacer;
+			@extend .btn-white-outline;
+		}
+	}
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.swiper-button-prev { transform: rotate(90deg); }
+.swiper-button-next { transform: rotate(-90deg); }
+
 
 .combinedbox {
 	font-size: 14px;

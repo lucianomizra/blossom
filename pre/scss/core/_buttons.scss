@@ -29,6 +29,9 @@
   &.focus {
     text-decoration: none;
   }
+  &:focus {
+    outline: 0 !important;
+  }
 
   &:active,
   &.active {

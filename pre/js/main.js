@@ -13,6 +13,7 @@ var App = {
 			Uclone($('.siteNav__lang, .siteNav__search'), $('.slideSiteNav__cloneSearch'));
 			Uclone($('.userNav_myAccount, .userNav_Items'), $('.slideUserNav__cloneNav'));
 			Accordion($('.accordion'));
+			ProductBox($('.product-box'));
 			siteNav();
 			userNav();
 			// $('#slideUserNav__Items_accordion').collapse();
@@ -121,6 +122,24 @@ var Accordion = (function (element) {
 			}
 
 		});
+
+	});
+
+});
+
+var ProductBox = (function (element) {
+
+	$(element).each(function(z,product) {
+
+		var PRODUCT = $(product);
+
+		var BTN_FAST_BUY = $('.btn-fast-buy',PRODUCT);
+
+		BTN_FAST_BUY.on('click',function(){
+
+			PRODUCT.toggleClass('open-fast-buy');
+		});
+
 
 	});
 

@@ -4,6 +4,7 @@ button.icon { background: none; border: none; }
 	background-size: contain;
 	background-repeat: no-repeat !important;
 	display: inline-block;
+	content: '';
 	&.big {
 		width: 64px;
 		height: 64px;
