@@ -1,0 +1,21 @@
+.accordion {
+	ul {
+		@extend .list-unstyled;
+	}
+	&__item {
+		&__title {
+			cursor: pointer;
+		}
+		&__content {
+			max-height: 0;
+			overflow: hidden;
+			transition: $basic-transitions max-height; 
+		}
+		&.open {
+			.accordion__item__content {
+				padding-bottom: $spacer;
+				max-height: inherit;
+			}
+		}
+	}
+}

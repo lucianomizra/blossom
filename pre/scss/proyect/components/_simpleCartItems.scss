@@ -1,0 +1,32 @@
+// simpleCartItems
+
+.simpleCartItems {
+	.item {
+		width: 100%;
+		margin-bottom: $spacer-y;
+		.item__left {
+			width: 40%;
+			float: left;
+			img {
+				width: 100%;
+			}
+		}
+		.item__body {
+			width: 60%;
+			float: left;
+			padding-left: $spacer-x;
+			padding-top: 20px;
+			p {
+				padding: 0;
+				margin: 0 0 5px 0;
+			}
+		}
+	}
+	.total {
+	    text-align: right;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    margin-bottom: $spacer-y;
+	    font-size: 18px;
+	}
+}

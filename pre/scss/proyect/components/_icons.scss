@@ -1,0 +1,28 @@
+// icons
+button.icon { background: none; border: none; }
+.icon {
+	background-size: contain;
+	background-repeat: no-repeat !important;
+	display: inline-block;
+	&.big {
+		width: 64px;
+		height: 64px;
+	}
+	&.small {
+		width: 16px;
+		height: 16px;
+	}
+
+	//icons
+	&.icon-bars { background-image: url('../img/ico/bars.png'); width: 37px; height: 25px; }
+	&.icon-search { background-image: url('../img/ico/search.png'); width: 31px; height: 28px; }
+	&.icon-user { background-image: url('../img/ico/user.png'); width: 39px; height: 36px; }
+	&.icon-cart { background-image: url('../img/ico/cart.png'); width: 39px; height: 36px; }
+	&.icon-close { background-image: url('../img/ico/close.png'); width: 20px; height: 20px; }
+	&.icon-close.big { background-image: url('../img/ico/close-big.png'); width: 25px; height: 25px; }
+	&.icon-close-gray { background-image: url('../img/ico/close-gray.png'); width: 20px; height: 20px; }
+	&.icon-close-pink { background-image: url('../img/ico/close-pink.png'); width: 20px; height: 20px; }
+	&.icon-facebook { background-image: url('../img/ico/facebook.png'); width: 43px; height: 46px; }
+	&.icon-instagram { background-image: url('../img/ico/instagram.png'); width: 43px; height: 46px; }
+	&.icon-more { background-image: url('../img/ico/more.png'); width: 55px; height: 55px; }
+}

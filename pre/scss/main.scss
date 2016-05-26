@@ -1,0 +1,62 @@
+/*!
+ * Developed by Inmediative Agency (http://inmediative.com) Copyright 2016
+ * In Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com) Copyright 2015
+ */
+ 
+// $enable-flex: true;
+
+// Core variables and mixins
+@import "proyect/variables";
+@import "mixins/mixins";
+
+// Reset and dependencies
+@import "vendor/normalize";
+@import "vendor/swiper";
+// @import "vendor/font-awesome";
+
+// Core CSS
+@import "core/print";
+@import "core/reboot";
+@import "core/type";
+@import "core/grid";
+@import "core/images";
+// @import "core/code";
+// @import "core/tables";
+@import "core/forms";
+@import "core/buttons"; 
+
+// Components
+@import "components/animation";
+// @import "components/dropdown";
+@import "components/button-group";
+// @import "components/input-group";
+@import "components/custom-forms";
+// @import "components/nav";
+// @import "components/navbar";
+@import "components/card";
+// @import "components/breadcrumb";
+// @import "components/pagination";
+// @import "components/pager";
+@import "components/labels";
+// @import "components/jumbotron";
+// @import "components/alert";
+// @import "components/progress";
+// @import "components/media";
+// @import "components/list-group";
+// @import "components/responsive-embed";
+// @import "components/close";
+
+// Components w/ JavaScript
+// @import "components/modal";
+// @import "components/tooltip";
+// @import "components/popover";
+// @import "components/carousel";
+
+// Utility classes
+@import "utilities/utilities";
+@import "utilities/background";
+@import "utilities/spacing";
+@import "utilities/responsive";
+
+// Proyect general resources
+@import "proyect/resources";

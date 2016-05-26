@@ -1,0 +1,11 @@
+.slide-home {
+	margin-bottom: $spacer*4;
+	.swiper-slide {
+		.picture {
+
+			height: 600px;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+}

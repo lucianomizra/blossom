@@ -1,0 +1,117 @@
+.product-box {
+	a {
+		width: 100%;
+		display: block;
+	}
+	&__picture {
+		img {
+			width: 100%;
+		}
+		margin-bottom: $spacer/2;
+	}
+
+	&__title {
+		@extend .text-capitalize;
+		font-weight: 300;
+		font-size: 18px;
+		margin: 0;
+	}
+
+	&__price {
+		font-weight: 900;
+		font-size: 16px;
+
+		&--old {
+			font-weight: 300;
+			text-decoration: line-through;
+		}
+		&--new {
+			margin-left: $spacer/2;
+			font-size: 24px;
+			color: $brand-primary;
+		}
+	}
+}
+
+
+.products-menu {
+	margin: $spacer*2 0 $spacer 0;
+	position: relative;
+	width: 100%;
+	background: rgba(255,255,255,.8);
+	z-index: 1000;
+	&__items {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 0;
+		width: 100%;
+		cursor: pointer;
+		@extend .text-uppercase;			
+		div {
+			width: 250px;
+			padding: 2px $spacer*2 2px $spacer;
+			position: relative;
+			&:after {
+				content: '';
+				display: inline-block;
+				margin-left: $spacer*2;
+				width: 20px;
+				height: 10px;
+				background-image: url('../img/ico/arrow-down-gray.png');
+			}
+		}
+
+	}
+	&__panel {
+		font-size: 14px;
+		max-height: 0;
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		transition: $basic-transitions max-height;
+		&__list {
+			@extend .list-unstyled;
+			padding: $spacer 0;
+			li {
+				width: 200px;
+				margin-right: 50px;
+				// padding: 2px $spacer*3;
+				padding-bottom: 3px;
+				a {
+					padding: 2px $spacer 2px $spacer;
+				}
+				a:hover,&.active a {
+					color: inherit;
+					background: $brand-secondary;
+				}
+			}
+		}
+		&__options {
+			right: $spacer*2;
+			bottom: $spacer*2;
+			position: absolute;
+			.btn:first-child {
+				margin-right: $spacer;
+			}
+		}
+		.box-filter-price {
+			padding: $spacer $spacer*3;
+			div {
+				margin-bottom: $spacer;
+			}
+			span {
+				width: 30px;
+				vertical-align: sub;
+				display: inline-block;
+			}
+			input {
+				border: 2px solid $brand-secondary;
+				padding: $input-padding-y $input-padding-x;
+			}
+		}
+	}
+	&:hover &__panel {
+		max-height: 350px;
+	}
+}

@@ -1,0 +1,1 @@
+<?php if(!$this->input->is_ajax_request()) $this->load->view('common/bottom') ?>

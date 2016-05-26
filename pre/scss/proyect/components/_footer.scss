@@ -1,0 +1,83 @@
+.footer {
+	font-size: 14px;
+	&__line-1 {
+		color: $gray-dark;
+		background: $brand-secundary;
+		@extend .text-uppercase;
+		padding: $spacer 0;
+		.in-container {
+			position: relative;
+		}
+		&__subscribe-box {
+			&__text {
+				vertical-align: sub;
+				font-weight: 700;
+			}
+			&__btn,
+			&__input {
+				margin: 0;
+				margin-left: $spacer/2;
+				@extend .input-control;
+				border-width: 1px;
+			}
+			&__btn {
+				font-weight: 700;
+				border-color: $gray-dark;
+				color: $gray-dark;
+				@extend .text-uppercase;
+			}
+		}
+
+		&__btn-outlet {
+			right: 0;
+			top: 0;
+			position: absolute;
+		}
+	}
+
+	&__line-2 {
+		color: $gray-dark;
+		background: $gray-lighter;
+		&__col1 {
+			padding-top: $spacer*2;
+			padding-bottom: $spacer*2;
+			h1 {
+				margin-bottom: $spacer*2;
+			}
+			a {
+				color: $brand-primary;
+				text-decoration: underline;
+			}
+		}
+		&__col2 {
+			text-align: center;
+			padding-top: $spacer;
+			li {
+				margin: $spacer 0;
+			}
+		}
+		&__col3 {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			height: 220px;
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+	&__line-3 {
+		padding: 5px 0;
+		background: $gray-dark;
+		text-align: right;
+		font-size: 12px;
+		color: white;
+		&__left {
+			position: absolute;
+		}
+		a {
+			color: white;
+		}
+	}
+}
